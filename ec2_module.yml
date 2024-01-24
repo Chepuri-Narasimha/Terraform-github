@@ -3,3 +3,4 @@ resource "aws_instance" "myec2" {
   key_name      = "Provisioner-key"
   instance_type = "t2.micro"
 }
+#updated from browser
