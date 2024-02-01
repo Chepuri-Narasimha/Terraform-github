@@ -5,7 +5,7 @@ module "vpc" {
   
   name = "VPC-DEV"
   cidr = "10.0.0.0/16"
-  azs                 = ["ap-south-2a", "ap-south-2b"]
+  azs                 = ["ap-south-2a", "ap-south-2b", "ap-south-2c"]
 #  private_subnets     = ["10.0.2.0/24"]
   public_subnets      = ["10.0.101.0/24"]
 
