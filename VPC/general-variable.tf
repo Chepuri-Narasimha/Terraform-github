@@ -10,7 +10,7 @@ variable "Owner" {
 
 variable "Environment" {
   type = string
-  
+  default = ""
 }
 
 #bastion variables 
