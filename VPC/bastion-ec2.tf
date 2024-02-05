@@ -6,6 +6,6 @@ module "ec2_public" {
   instance_type          = var.instance_types
   key_name               = var.key_pair
   vpc_security_group_ids = [module.public_bastion_sg.security_group_id]
-  subnet_id              = module.vpc.public_subnets[*]
+  subnet_id              = module.vpc.public_subnets[0]
   tags                   = local.common_tags
 }
