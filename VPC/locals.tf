@@ -6,4 +6,5 @@ locals {
     Owner =  local.Owner
     Environment = local.Environment
   }
+    eks_cluster_name = "${local.name}-${var.cluster_name}"  
 }
