@@ -23,5 +23,5 @@ variable "instance_types" {
 
 variable "key_pair" {
   type = string
-  default = "eks-terraform"
+  default = "jenkins-server"
 }
