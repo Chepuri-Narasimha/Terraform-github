@@ -1,3 +1,5 @@
+
+/*
 module "ec2_public" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "bastion-host-${local.name}"
@@ -9,3 +11,5 @@ module "ec2_public" {
   subnet_id              = module.vpc.public_subnets[0]
   tags                   = local.common_tags
 }
+
+*/

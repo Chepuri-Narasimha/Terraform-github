@@ -1,3 +1,4 @@
+/*
 resource "null_resource" "copy_ec2_keys" {
   depends_on = [module.ec2_public]
   connection {
@@ -23,3 +24,5 @@ resource "null_resource" "copy_ec2_keys" {
     
   }
 }
+
+*/

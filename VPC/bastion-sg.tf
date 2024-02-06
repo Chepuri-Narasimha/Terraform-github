@@ -1,3 +1,4 @@
+/*
 module "public_bastion_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.1.0"
@@ -13,3 +14,5 @@ module "public_bastion_sg" {
   egress_rules      = ["all-all"]
   tags = local.common_tags
 }
+
+*/
