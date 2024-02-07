@@ -6,3 +6,5 @@ data "terraform_remote_state" "eks" {
     }
 
 }
+
+#data.terraform_remote_state.eks.outputs.cluster_id
