@@ -23,5 +23,5 @@ variable "instance_types" {
 
 variable "key_pair" {
   type = string
-  default = "Jenkins-server"
+  default = "eks-key.pem"
 }
