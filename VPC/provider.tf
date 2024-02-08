@@ -8,6 +8,14 @@ terraform {
       version = ">= 5.31"
     }
   }
+  
+  backend "s3" {
+      bucket = "aws-eks-demo-bucket"
+      key = "dev/terraform.tfstate"
+      region = var.region
+
+      dynamodb_table = "eks_cluster_key"    
+  }
 }
 
 # Provider Block
