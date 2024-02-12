@@ -4,6 +4,12 @@ variable "cluster_name" {
   default     = "eksdemo"
 }
 
+variable "ng_instance_types" {
+  description = "instance_type"
+  type = list 
+  default = ["t3.micro"]
+}
+
 variable "cluster_service_ipv4_cidr" {
   description = "service ipv4 cidr for the kubernetes cluster"
   type        = string
