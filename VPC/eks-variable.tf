@@ -6,8 +6,8 @@ variable "cluster_name" {
 
 variable "ng_instance_types" {
   description = "instance_type"
-  type = list 
-  default = ["t3.micro"]
+  type = string 
+  default = "t3.micro"
 }
 
 variable "cluster_service_ipv4_cidr" {
