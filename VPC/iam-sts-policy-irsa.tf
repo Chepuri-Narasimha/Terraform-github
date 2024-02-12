@@ -4,6 +4,7 @@
 # Resource: Create IAM Role and associate the EBS IAM Policy to it
 resource "aws_iam_role" "irsa_iam_role" {
   name = "${local.name}-irsa-iam-role"
+  depends_on = [aws_iam_openid_connect_provider.oidc_provider]
 
   # Terraform's "jsonencode" function converts a Terraform expression result to valid JSON syntax.
   assume_role_policy = jsonencode({
