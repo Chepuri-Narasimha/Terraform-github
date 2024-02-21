@@ -11,7 +11,7 @@ terraform {
   
   backend "s3" {
       bucket = "aws-eks-demo-bucket"
-      key = "dev/terraform.tfstate"
+      key = "dev/iamuser.tfstate"
       region = "eu-west-1"
 
       dynamodb_table = "eks_cluster_key"    
