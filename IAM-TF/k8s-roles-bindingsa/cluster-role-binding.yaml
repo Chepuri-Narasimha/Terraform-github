@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: eks-readonly-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: eks-readonly
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: Group                             #User, Group, ServiceAccount
+  name: eks-readonly-group
