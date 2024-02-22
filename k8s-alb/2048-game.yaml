@@ -31,6 +31,8 @@ kind: Service
 metadata:
   namespace: game-2048
   name: service-2048
+  annotations:
+    alb.ingress.kubernetes.io/healthcheck-path: /index.html  
 spec:
   ports:
     - port: 80
