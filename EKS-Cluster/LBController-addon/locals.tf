@@ -6,5 +6,5 @@ locals {
     Owner =  local.Owner
     Environment = local.Environment
   }
-    eks_cluster_name = "${data.terraform_remote_state.esk.outputs.cluster_id}"  
+    eks_cluster_name = "${data.terraform_remote_state.eks.outputs.cluster_id}"  
 }
