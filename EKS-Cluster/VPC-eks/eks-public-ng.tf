@@ -1,4 +1,4 @@
-resource "aws_eks_node_group" "eks_ng_public" {
+/*esource "aws_eks_node_group" "eks_ng_public" {
   cluster_name    = aws_eks_cluster.eks_cluster.name
 
   node_group_name = "${local.name}-eks-ng-public"
@@ -36,4 +36,4 @@ resource "aws_eks_node_group" "eks_ng_public" {
   tags = {
     name ="public-node-group"
   }
-}
+}*/
