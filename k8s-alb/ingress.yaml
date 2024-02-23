@@ -9,7 +9,7 @@ metadata:
     alb.ingress.kubernetes.io/load-balancer-name: game-ingress
     # Health Check Settings
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTP 
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+    #alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/healthcheck-port: traffic-port
     #alb.ingress.kubernetes.io/healthcheck-path: /index.html    
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: '15'
@@ -18,7 +18,7 @@ metadata:
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
     alb.ingress.kubernetes.io/ssl-redirect: '443'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-1:291023148514:certificate/a4db9e32-e738-4950-a626-1b61a0450597
+    # alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-1:291023148514:certificate/a4db9e32-e738-4950-a626-1b61a0450597
     # External DNS - For creating a Record Set in Route53
     external-dns.alpha.kubernetes.io/hostname: 2048.balatalks.xyz
 spec:
