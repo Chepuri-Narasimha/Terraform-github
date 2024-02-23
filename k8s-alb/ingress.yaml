@@ -20,7 +20,7 @@ metadata:
     alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/certificate-arn: 'arn' #certicate arn here 
     # External DNS - For creating a Record Set in Route53
-    #external-dns.alpha.kubernetes.io/hostname: dnstest901.stacksimplify.com, dnstest902.stacksimplify.com
+    # external-dns.alpha.kubernetes.io/hostname: dnstest901.stacksimplify.com, dnstest902.stacksimplify.com
 spec:
   ingressClassName: my-aws-ingress-class 
   rules:
