@@ -5,7 +5,7 @@ metadata:
   name: game-ingress
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing    
-    alb.ingress.kubernetes.io/target-type: ip #Target instance-type is for nodeport IP for cluster IP # instance default
+    alb.ingress.kubernetes.io/target-type: instnace #Target instance-type is for nodeport IP for cluster IP # instance default
     alb.ingress.kubernetes.io/load-balancer-name: game-ingress
     # Health Check Settings
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTP 
@@ -17,7 +17,7 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: '200'
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
-    alb.ingress.kubernetes.io/ssl-redirect: '443'
+    #alb.ingress.kubernetes.io/ssl-redirect: '443'
     # alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-1:291023148514:certificate/a4db9e32-e738-4950-a626-1b61a0450597
     # External DNS - For creating a Record Set in Route53
     external-dns.alpha.kubernetes.io/hostname: 2048.balatalks.xyz
