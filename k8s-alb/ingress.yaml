@@ -5,7 +5,7 @@ metadata:
   name: game-ingress
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing    
-    alb.ingress.kubernetes.io/target-type: instnace #Target instance-type is for nodeport IP for cluster IP # instance default
+    alb.ingress.kubernetes.io/target-type: instance #Target instance-type is for nodeport IP for cluster IP # instance default
     alb.ingress.kubernetes.io/load-balancer-name: game-ingress
     # Health Check Settings
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTP 
