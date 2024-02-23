@@ -15,7 +15,7 @@ spec:
         app.kubernetes.io/name: app-plus
     spec:
       containers:
-      - image: public.ecr.aws/q8n5r7t9/plus-game:prod-0217
+      - image: public.ecr.aws/l6m2t8p7/docker-2048:latest
         imagePullPolicy: Always
         name: app-plus
         ports:
