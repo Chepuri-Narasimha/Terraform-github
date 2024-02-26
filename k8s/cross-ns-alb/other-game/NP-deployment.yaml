@@ -32,7 +32,7 @@ metadata:
   namespace: other-game
   name: service-other
   annotations:
-    alb.ingress.kubernetes.io/healthcheck-path: /app2/
+    alb.ingress.kubernetes.io/healthcheck-path: /
 spec:
   ports:
     - port: 80
