@@ -34,7 +34,7 @@ metadata:
   namespace: game-2048
   name: service-2048
   annotations:
-    alb.ingress.kubernetes.io/healthcheck-path: /
+    alb.ingress.kubernetes.io/healthcheck-path: /app1/
 spec:
   ports:
     - port: 80
