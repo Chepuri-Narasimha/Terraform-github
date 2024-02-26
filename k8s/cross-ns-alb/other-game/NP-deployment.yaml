@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: app-other
     spec:
       containers:
-      - image: stacksimplify/kube-nginxapp1:1.0.0
+      - image: stacksimplify/kube-nginxapp2:1.0.0
         imagePullPolicy: Always
         name: app-other
         ports:
@@ -32,7 +32,7 @@ metadata:
   namespace: other-game
   name: service-other
   annotations:
-    alb.ingress.kubernetes.io/healthcheck-path: /
+    alb.ingress.kubernetes.io/healthcheck-path: /app2/index.html
 spec:
   ports:
     - port: 80
