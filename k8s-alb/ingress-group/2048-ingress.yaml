@@ -20,23 +20,18 @@ metadata:
     #alb.ingress.kubernetes.io/ssl-redirect: '443'
     # alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-1:291023148514:certificate/a4db9e32-e738-4950-a626-1b61a0450597
     # External DNS - For creating a Record Set in Route53
-    external-dns.alpha.kubernetes.io/hostname: 2048.balatalks.xyz
+    external-dns.alpha.kubernetes.io/hostname: default.balatalks.xyz
+    alb.ingress.kubernetes.io/group.name: myapps.web
+    alb.ingress.kubernetes.io/group.order: '10'
 spec:
   ingressClassName: my-aws-ingress-class 
   rules:
     - http:
         paths:
-        - path: /
+        - path: /app1
           pathType: Prefix
           backend:
             service:
               name: service-2048
-              port:
-                number: 80
-        - path: /app 
-          pathType: Prefix
-          backend:
-            service:
-              name: service-plus
               port:
                 number: 80

@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: game-plus
+  name: game-ingress
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing    
+    alb.ingress.kubernetes.io/target-type: instance #Target instance-type is for nodeport IP for cluster IP # instance default
+    alb.ingress.kubernetes.io/load-balancer-name: game-ingress
+    # Health Check Settings
+    alb.ingress.kubernetes.io/healthcheck-protocol: HTTP 
+    #alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/healthcheck-port: traffic-port
+    #alb.ingress.kubernetes.io/healthcheck-path: /index.html    
+    alb.ingress.kubernetes.io/healthcheck-interval-seconds: '15'
+    alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '5'
+    alb.ingress.kubernetes.io/success-codes: '200'
+    alb.ingress.kubernetes.io/healthy-threshold-count: '2'
+    alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
+    #alb.ingress.kubernetes.io/ssl-redirect: '443'
+    # alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:eu-west-1:291023148514:certificate/a4db9e32-e738-4950-a626-1b61a0450597
+    # External DNS - For creating a Record Set in Route53
+    external-dns.alpha.kubernetes.io/hostname: default.balatalks.xyz
+    alb.ingress.kubernetes.io/group.name: myapps.web
+    alb.ingress.kubernetes.io/group.order: '20'
+spec:
+  ingressClassName: my-aws-ingress-class 
+  rules:
+    - http:
+        paths:
+        - path: /app2
+          pathType: Prefix
+          backend:
+            service:
+              name: service-plus
+              port:
+                number: 80
