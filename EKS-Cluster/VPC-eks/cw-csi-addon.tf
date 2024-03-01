@@ -11,6 +11,6 @@ output "cw_csi_addon_arn" {
   value = aws_eks_addon.cw_csi_addon.arn 
 }
 
-output "csi_driver_id" {
+output "cw_csi_addon_id" {
   value = aws_eks_addon.cw_csi_addon.id
 }
