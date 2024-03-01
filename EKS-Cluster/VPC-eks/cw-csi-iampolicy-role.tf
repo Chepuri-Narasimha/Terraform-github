@@ -6,7 +6,7 @@ data "aws_iam_policy_document" "cw_csi" {
     condition {
       test     = "StringEquals"
       variable = "${local.aws_iam_oidc_connect_provider_extract_from_arn}:sub"
-      values   = ["system:serviceaccount:kube-system:cw-csi-controller-sa"]
+      values   = ["system:serviceaccount:amazon-cloudwatch:cloudwatch-agent"]
     }
  /*       Condition = {
           StringEquals = {            
