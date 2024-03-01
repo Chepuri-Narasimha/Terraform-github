@@ -36,7 +36,7 @@ resource "aws_iam_role_policy_attachment" "eks-Autoscaling-Full-Access" {
 }
 
 #cloudwatch agent access
-resource "aws_iam_role_policy_attachment" "eks-Autoscaling-Full-Access" {
+resource "aws_iam_role_policy_attachment" "eks-CloudWatch-Access" {
   policy_arn = "arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"
   role       = aws_iam_role.eks_nodegroup_role.name
 }
