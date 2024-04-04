@@ -13,7 +13,7 @@ module "vpc" {
   public_subnets      = ["10.0.101.0/24", "10.0.102.0/24"]
 
  #Database Subnets
-  database_subnets    = ["10.0.151.0/24"]
+  database_subnets    = ["10.0.151.0/24", "10.0.152.0/24"]
   create_database_subnet_group = true
   create_database_subnet_route_table= true
 
@@ -32,10 +32,10 @@ module "vpc" {
     Type = "private-subnets"
     "kubernetes.io/role/internal-elb" = 1    
     "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"  
-  }/*
+  }
   database_subnet_tags = {
     Type = "database-subnets"
-  }*/ 
+  }
 
 #common tags
   tags = {
