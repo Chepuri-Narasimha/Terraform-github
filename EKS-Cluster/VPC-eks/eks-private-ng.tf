@@ -1,4 +1,4 @@
-resource "aws_eks_node_group" "eks_ng_private" {
+/*resource "aws_eks_node_group" "eks_ng_private" {
   cluster_name    = aws_eks_cluster.eks_cluster.name
 
   node_group_name = "${local.name}-eks-ng-private"
@@ -39,4 +39,4 @@ resource "aws_eks_node_group" "eks_ng_private" {
     "k8s.io/cluster-autoscaler/${local.eks_cluster_name}" = "owned"
     "k8s.io/cluster-autoscaler/enabled" = "TRUE"
   }
-}
+}*/
