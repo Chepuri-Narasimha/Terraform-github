@@ -14,3 +14,9 @@ output "cw_csi_addon_arn" {
 output "cw_csi_addon_id" {
   value = aws_eks_addon.cw_csi_addon.id
 }
+
+/*
+The add-on installs the CloudWatch agent to send infrastructure metrics from the cluster,
+installs Fluent Bit to send container logs, 
+and also enables CloudWatch Application Signals to send application performance telemetry.
+*/
